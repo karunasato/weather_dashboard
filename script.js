@@ -52,10 +52,9 @@ form.addEventListener("submit", e => {
     .then(response => response.json())
     .then(data => {
       const { main, name, weather } = data;
-      const icon = ` var iconCode1 = response.list[1].weather[0].icon;
-                var iconURL1 = "http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png";${
+      const icon = `https://openweathermap.org/img/wn/${
         weather[0]["icon"]
-      }`;
+      }@2x.png`;;
 
       const li = document.createElement("li");
       li.classList.add("city");
